@@ -70,7 +70,7 @@ function createSecondaryWindow() {
   });
 
   newWindow.setMenuBarVisibility(false);
-  newWindow.setTitle('Trimps');
+  newWindow.setTitle('Pokeidle');
 
   // Check if we've already downloaded the data, otherwise load our loading screen
   if (fs.existsSync(`https://pokeidle.net/#`)) {
@@ -153,7 +153,7 @@ app.on('activate', () => {
         }
 
         const userResponse = dialog.showMessageBoxSync(mainWindow, {
-          title: 'Trimp - Update success!',
+          title: 'Pokeidle - Update success!',
           message: `Successfully updated,\nwould you like to reload the page now?`,
           "icon": "/build/Pokeidle.png",
           buttons: ['Yes', 'No'],
@@ -175,7 +175,7 @@ app.on('activate', () => {
 
     const userResponse = dialog.showMessageBoxSync(mainWindow, {
       type: 'error',
-      title: 'Trimps - Update failed!',
+      title: 'Pokeidle - Update failed!',
       message: `Failed to download or extract the update,\nWould you like to retry?`,
       "icon": "/build/Pokeidle.png",
       buttons: ['Yes', 'No'],
@@ -219,7 +219,7 @@ app.on('activate', () => {
 
   const shouldUpdateNowCheck = () => {
     const userResponse = dialog.showMessageBoxSync(mainWindow, {
-      title: 'Trimps - Update available!',
+      title: 'Pokeidle - Update available!',
       message: `There is a new update available (v${newVersion}),\nWould you like to download it now?\n\n`,
       "icon": "/build/Pokeidle.png",
       buttons: ['Update Now', 'Remind Me', 'No (disable check)'],
@@ -263,7 +263,7 @@ app.on('activate', () => {
   try {
     autoUpdater.on('update-downloaded', () => {
       const userResponse = dialog.showMessageBoxSync(mainWindow, {
-        title: 'Trimps - Client Update Available!',
+        title: 'Pokeidle - Client Update Available!',
         message: `There is a new client update available,\nWould you like to install it now?\n\n`,
         "icon": "/build/Pokeidle.png",
         buttons: ['Restart App Now', 'Later'],
